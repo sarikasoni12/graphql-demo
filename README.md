@@ -9,7 +9,7 @@ This repository is to show the basic demo of GraphQL integration with Mysql
 ### Steps for local setup 
 Run following command in the terminal
 
-1. make start 
+1. `make start` 
 
 ```
 The make command does folloing
