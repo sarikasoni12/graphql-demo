@@ -1,4 +1,4 @@
-import { buildSchema } from "graphql";
+import {buildSchema} from "graphql";
 
 const schema = buildSchema(`
     type Query {
@@ -26,6 +26,6 @@ const schema = buildSchema(`
     type Mutation {
         createProduct(input: ProductInput): Product
     }
-`)
+`);
 
 export default schema;

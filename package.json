@@ -5,7 +5,11 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "start": "nodemon ./index.js --exec babel-node -e js"
+    "start": "nodemon ./index.js --exec babel-node -e js",
+    "format:check": "prettier --check .",
+   "format:write": "prettier --write .",
+   "lint:check": "eslint .",
+   "lint:fix": "eslint --fix ."
   },
   "author": "",
   "license": "ISC",

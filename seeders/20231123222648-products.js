@@ -1,22 +1,23 @@
-'use strict';
+"use strict";
 
 /** @type {import('sequelize-cli').Migration} */
+// eslint-disable-next-line no-undef
 module.exports = {
-  async up (queryInterface, Sequelize) {
-    return queryInterface.bulkInsert('product', [
+  async up(queryInterface) {
+    return queryInterface.bulkInsert("product", [
       {
         id: 1,
-        name: 'Product 1',
+        name: "Product 1",
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
       },
       {
         id: 2,
-        name: 'Product 2',
+        name: "Product 2",
         createdAt: new Date(),
-        updatedAt: new Date()
-      }
-  ], {updateOnDuplicate: ["name"]});
+        updatedAt: new Date(),
+      },
+    ], {updateOnDuplicate: ["name"]});
     /**
      * Add seed commands here.
      *
@@ -28,7 +29,7 @@ module.exports = {
     */
   },
 
-  async down (queryInterface, Sequelize) {
-    return queryInterface.bulkDelete('product', null, {});
-  }
+  async down(queryInterface) {
+    return queryInterface.bulkDelete("product", null, {});
+  },
 };
