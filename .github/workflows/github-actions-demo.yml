@@ -2,33 +2,31 @@ name: Linting and Prettier
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
-  run-linters:
-    name: Lint
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out Git repository
-        uses: actions/checkout@v2
-      - name: Set up Node.js
-        uses: actions/setup-node@v1
-        with:
-         node-version: v18.18.0
-      - name: Install dependencies
-        run: npm install
-      - name: Run linters
-        run: npm run lint:check
-  prettier:
-    name: Prettier
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out Git repository
-        uses: actions/checkout@v2
-      - name: Set up Node.js
-        uses: actions/setup-node@v1
-        with:
-         node-version: v18.18.0
-      - name: Install dependencies
-        run: npm install
-      - name: Run Prettier
-        run: npm run format:check
-
-      
+    run-linters:
+        name: Lint
+        runs-on: ubuntu-latest
+        steps:
+            - name: Check out Git repository
+              uses: actions/checkout@v2
+            - name: Set up Node.js
+              uses: actions/setup-node@v1
+              with:
+                  node-version: v18.18.0
+            - name: Install dependencies
+              run: npm install
+            - name: Run linters
+              run: npm run lint:check
+    prettier:
+        name: Prettier
+        runs-on: ubuntu-latest
+        steps:
+            - name: Check out Git repository
+              uses: actions/checkout@v2
+            - name: Set up Node.js
+              uses: actions/setup-node@v1
+              with:
+                  node-version: v18.18.0
+            - name: Install dependencies
+              run: npm install
+            - name: Run Prettier
+              run: npm run format:check

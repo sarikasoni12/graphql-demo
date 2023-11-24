@@ -9,8 +9,6 @@
         "sourceType": "module"
     },
     "plugins": [],
-    "rules": {
-        "semi": ["error", "always"],
-        "quotes": ["error", "double"]
+    "rules": {        
     }
 }
