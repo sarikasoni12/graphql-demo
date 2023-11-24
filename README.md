@@ -18,3 +18,4 @@ The make command does folloing
 3. Seed the db
 4. Installs all npm packages
 5. Serves the app at port :8080
+ss
