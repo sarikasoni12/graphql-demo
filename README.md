@@ -18,3 +18,8 @@ The make command does folloing
 3. Seed the db
 4. Installs all npm packages
 5. Serves the app at port :8080
+
+```
+
+### For reference
+1. https://dev.to/devland/set-up-a-nodejs-app-with-eslint-and-prettier-4i7p
