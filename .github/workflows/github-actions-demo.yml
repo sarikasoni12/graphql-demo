@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: Linting and Prettier
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
@@ -15,7 +15,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Run linters
-        run: npm run link:check
+        run: npm run lint:check
   prettier:
     name: Prettier
     runs-on: ubuntu-latest
