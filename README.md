@@ -23,6 +23,13 @@ The make command does folloing
 
 ```
 
+### For pushing a PR
+
+Run following commands and fix the issues before pushing a pull request. A workflow is added through github actions which will trigger following checks on a PR
+
+1. `npm run lint:check`
+2. `npm run format:check`
+
 ### For reference
 
 1. https://dev.to/devland/set-up-a-nodejs-app-with-eslint-and-prettier-4i7p

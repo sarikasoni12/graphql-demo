@@ -5,9 +5,9 @@ dev: install
 install: seed
 	npm install	
 seed: migrate
-	npx sequelize-cli db:seed:all
+	npx sequelize-cli db:seed:all --seeders-path database/seeders
 migrate: docker	
-	npx sequelize-cli db:migrate
+	npx sequelize-cli db:migrate --migrations-path database/migrations
 docker:
 	docker-compose up -d	
 
