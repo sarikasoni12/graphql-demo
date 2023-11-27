@@ -11,17 +11,17 @@ services:
             MYSQL_PASSWORD: "password"
             MYSQL_ROOT_PASSWORD: "password"
         healthcheck:
-            test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+            test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
             timeout: 20s
             retries: 10
         ports:
             - "3306:3306"
     nodejs:
         build: .
-        depends_on: 
+        depends_on:
             mysql:
                 condition: service_healthy
         volumes:
-            - .:/usr/src/app        
+            - .:/usr/src/app
         ports:
-            - "8080:8080"        
+            - "8080:8080"
