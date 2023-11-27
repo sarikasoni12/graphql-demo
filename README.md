@@ -19,7 +19,7 @@ The make command does folloing
 2. Run the db migrations
 3. Seed the db
 5. Serves the app at port :8080
-6. Test this route: http://localhost:8080/graphql 
+6. Test this route: http://localhost:8080/graphql
 
 ```
 
