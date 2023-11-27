@@ -11,15 +11,15 @@ This repository is to show the basic demo of GraphQL integration with Mysql
 
 Run following command in the terminal
 
-1. `make start`
+1. `make init`
 
 ```
 The make command does folloing
-1. Creates an instance of mysql container
+1. Creates instances of app and mysql container
 2. Run the db migrations
 3. Seed the db
-4. Installs all npm packages
 5. Serves the app at port :8080
+6. Test this route: http://localhost:8080/graphql
 
 ```
 
