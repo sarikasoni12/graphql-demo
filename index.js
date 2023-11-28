@@ -2,7 +2,7 @@ import express from "express"
 import { graphqlHTTP } from "express-graphql"
 import schema from "./data/schema.js"
 import resolvers from "./data/resolvers.js"
-import { db } from "./data/database.js"
+import { db } from "./database/database.js"
 db.connect()
 
 const app = express()

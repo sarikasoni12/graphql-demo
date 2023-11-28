@@ -1,10 +1,10 @@
 import mysql from "mysql2"
+const dotenv = require("dotenv").config().parsed
 const connection = mysql.createConnection({
-    host: "localhost",
-    user: "user",
-    password: "password",
-    // port: 3306,
-    database: "db",
+    host: dotenv.DB_HOST,
+    user: dotenv.DB_USER,
+    password: dotenv.DB_PASSWORD,
+    database: dotenv.DB_DATABASE,
 })
 
 export const db = {

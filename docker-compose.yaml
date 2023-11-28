@@ -3,10 +3,25 @@ services:
     mysql:
         image: mysql
         restart: always
+        volumes:
+            - ./docker/mysql:/var/lib/mysql
         environment:
             MYSQL_DATABASE: "db"
             MYSQL_USER: "user"
             MYSQL_PASSWORD: "password"
             MYSQL_ROOT_PASSWORD: "password"
+        healthcheck:
+            test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+            timeout: 20s
+            retries: 10
         ports:
             - "3306:3306"
+    nodejs:
+        build: .
+        depends_on:
+            mysql:
+                condition: service_healthy
+        volumes:
+            - .:/usr/src/app
+        ports:
+            - "8080:8080"
